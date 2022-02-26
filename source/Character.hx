@@ -97,6 +97,21 @@ class Character extends FlxSprite
 				barColor = 0xFFaf66ce;
 
 				playAnim('idle');
+				
+				case 'pshaggy':
+				tex = Paths.getSparrowAtlas('pshaggy', 'shared', true);
+				frames = tex;
+				animation.addByPrefix('idle', 'pshaggy_idle', 24, false);
+				animation.addByPrefix('singUP', 'pshaggy_up', 24, false);
+				animation.addByPrefix('singRIGHT', 'pshaggy_right', 24, false);
+				animation.addByPrefix('singDOWN', 'pshaggy_down', 24, false);
+				animation.addByPrefix('singLEFT', 'pshaggy_left', 24, false);
+				animation.addByIndices('idleLoop', "pshaggy_idle", [11, 12], "", 12, true);
+
+				loadOffsetFile(curCharacter);
+				barColor = 0xFFaf66ce;
+
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('spooky_kids_assets', 'shared', true);
 				frames = tex;
